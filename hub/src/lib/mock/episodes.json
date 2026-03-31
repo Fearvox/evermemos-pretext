@@ -1,0 +1,45 @@
+[
+  {
+    "id": "ep-001",
+    "type": "episode",
+    "title": "Project Planning Session",
+    "turns": [
+      {"id": "t-001-1", "role": "user", "content": "I need help planning the EverMemOS integration with Pretext for text rendering.", "timestamp": "2026-03-15T10:00:00Z"},
+      {"id": "t-001-2", "role": "agent", "content": "Great! Let's break this down. First, we need to understand Pretext's two-phase model: prepare() for measurement and layout() for positioning.", "timestamp": "2026-03-15T10:01:00Z"},
+      {"id": "t-001-3", "role": "user", "content": "How does the measurement caching work? I want to avoid calling prepare() too often.", "timestamp": "2026-03-15T10:02:00Z"},
+      {"id": "t-001-4", "role": "agent", "content": "prepare() is expensive because it needs Canvas for font metrics. The key is to cache by (text, font) pairs. layout() is cheap — just arithmetic — so you can call it on every resize.", "timestamp": "2026-03-15T10:03:00Z"},
+      {"id": "t-001-5", "role": "user", "content": "That makes sense. What about virtualization?", "timestamp": "2026-03-15T10:04:00Z"},
+      {"id": "t-001-6", "role": "agent", "content": "Use @tanstack/react-virtual with Pretext heights. The key insight: Pretext gives you exact pixel heights without DOM measurement, so you can feed them directly to the virtualizer's measureElement callback.", "timestamp": "2026-03-15T10:05:00Z"}
+    ],
+    "tags": ["planning", "project", "pretext"],
+    "createdAt": "2026-03-15T10:00:00Z",
+    "updatedAt": "2026-03-15T10:05:00Z"
+  },
+  {
+    "id": "ep-002",
+    "type": "episode",
+    "title": "多语言文本讨论",
+    "turns": [
+      {"id": "t-002-1", "role": "user", "content": "你好世界！我在测试中文文本渲染。Pretext 对 CJK 文字的支持怎么样？", "timestamp": "2026-03-16T14:00:00Z"},
+      {"id": "t-002-2", "role": "agent", "content": "日本語のテストも含めましょう。プリテキストは禁則処理（kinsoku）をサポートしています。行頭に句読点が来ないよう自動調整します。", "timestamp": "2026-03-16T14:01:00Z"},
+      {"id": "t-002-3", "role": "user", "content": "太好了。那混合排版呢？比如中文里夹杂 English words 和数字 12345。", "timestamp": "2026-03-16T14:02:00Z"},
+      {"id": "t-002-4", "role": "agent", "content": "混合テキストは問題ありません。Pretextは各文字のUnicodeプロパティを解析し、適切な改行位置を決定します。CJKは文字間で改行可能、英語は単語境界で改行します。", "timestamp": "2026-03-16T14:03:00Z"}
+    ],
+    "tags": ["multilingual", "cjk", "testing"],
+    "createdAt": "2026-03-16T14:00:00Z",
+    "updatedAt": "2026-03-16T14:03:00Z"
+  },
+  {
+    "id": "ep-003",
+    "type": "episode",
+    "title": "Arabic and Emoji Rendering",
+    "turns": [
+      {"id": "t-003-1", "role": "user", "content": "مرحبا بالعالم 🌍 هل يدعم Pretext النصوص العربية من اليمين لليسار؟", "timestamp": "2026-03-17T09:00:00Z"},
+      {"id": "t-003-2", "role": "agent", "content": "Great question! 🚀 Pretext supports bidi text through the prepareWithSegments() API path. Each segment carries RTL/LTR metadata for correct rendering.", "timestamp": "2026-03-17T09:01:00Z"},
+      {"id": "t-003-3", "role": "user", "content": "ممتاز! وماذا عن الرموز التعبيرية مثل 👨‍💻 و 🇯🇵？", "timestamp": "2026-03-17T09:02:00Z"}
+    ],
+    "tags": ["arabic", "emoji", "bidi"],
+    "createdAt": "2026-03-17T09:00:00Z",
+    "updatedAt": "2026-03-17T09:02:00Z"
+  }
+]
