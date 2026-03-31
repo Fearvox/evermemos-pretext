@@ -14,10 +14,11 @@
 
 ## Phase Details
 
-### Phase 1: Foundation
+### Phase 1: Foundation ✅ COMPLETE
 **Goal:** Scaffold the Next.js 16 Hub, establish Pretext as a git submodule with working integration hooks, and prove SSR-safe client hydration on a sandbox page.
 **Requirements:** INFRA-01, INFRA-02, INFRA-03, INFRA-04, INFRA-05, PTXT-01, PTXT-02, PTXT-03, PTXT-04, PTXT-05, PTXT-06
 **UI hint:** yes — sandbox page renders measured text block; dark mode skeleton in place
+**Plans:** 01-01 ✅ | 01-02 ✅ | 01-03 ✅
 
 **Success Criteria:**
 1. `npm run dev` starts Hub on port 3001 without errors; Pretext submodule is initialized and `dist/layout.js` is present.
