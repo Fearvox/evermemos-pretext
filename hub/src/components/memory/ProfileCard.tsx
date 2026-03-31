@@ -3,7 +3,7 @@
 import { useRef } from 'react'
 import { usePrepared, useLayout, useContainerWidth, PRETEXT_FONT, PRETEXT_LINE_HEIGHT } from '@/lib/pretext'
 import { SearchHighlight } from './SearchHighlight'
-import type { Profile } from '@shared/types'
+import type { Profile, ProfileField } from '@shared/types'
 
 const COMPACT_CHAR_LIMIT = 200
 
@@ -22,7 +22,7 @@ export function ProfileCardContent({ profile, isExpanded, searchQuery }: { profi
       </div>
       {profile.fields.length > 0 && (
         <div className="mb-3 space-y-1">
-          {profile.fields.map((field) => (
+          {profile.fields.map((field: ProfileField) => (
             <div key={field.label} className="flex gap-2 text-sm">
               <span className="text-[var(--text-muted)] font-medium shrink-0">{field.label}:</span>
               <span className="text-[var(--text-secondary)]">{field.value}</span>
