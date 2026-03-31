@@ -1,5 +1,5 @@
 {
-  "installCommand": "cd hub && npm install",
+  "installCommand": "cd hub && npm install && ln -sf $(pwd)/node_modules ../shared/node_modules",
   "buildCommand": "cd pretext && npm install --no-package-lock --legacy-peer-deps --ignore-scripts typescript@6.0.2 && npx tsc -p tsconfig.build.json && cd ../hub && npm run build",
   "outputDirectory": "hub/.next",
   "git": {
