@@ -38,12 +38,12 @@ async function fetchMock(params: FetchMemoriesParams): Promise<PaginatedResponse
     items = items.filter((item) => item.type === params.type)
   }
   if (params.tags && params.tags.length > 0) {
-    items = items.filter((item) => params.tags!.every((tag) => item.tags.includes(tag)))
+    items = items.filter((item) => params.tags!.every((tag: string) => item.tags.includes(tag)))
   }
   if (params.query) {
     const q = params.query.toLowerCase()
     items = items.filter((item) => {
-      if (item.type === 'episode') return item.title.toLowerCase().includes(q) || item.turns.some((t) => t.content.toLowerCase().includes(q))
+      if (item.type === 'episode') return item.title.toLowerCase().includes(q) || item.turns.some((t: { content: string }) => t.content.toLowerCase().includes(q))
       if (item.type === 'profile') return item.name.toLowerCase().includes(q) || item.description.toLowerCase().includes(q)
       return item.subject.toLowerCase().includes(q) || item.content.toLowerCase().includes(q)
     })
