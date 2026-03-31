@@ -4,11 +4,9 @@ import path from 'path'
 
 const nextConfig: NextConfig = {
   transpilePackages: ['@chenglou/pretext'],
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        '@pretext': path.resolve(__dirname, '../pretext/src/layout.ts'),
-      },
+  turbopack: {
+    resolveAlias: {
+      '@pretext': path.resolve(__dirname, '../pretext/src/layout.ts'),
     },
   },
   webpack(config) {
