@@ -5,7 +5,7 @@ export function paginatedResponseSchema<T extends ZodType>(itemSchema: T) {
     data: z.array(itemSchema),
     cursor: z.string().nullable(),
     hasMore: z.boolean(),
-    total: z.number().int().nonneg().optional(),
+    total: z.number().int().nonnegative().optional(),
   })
 }
 
