@@ -12,16 +12,15 @@ Memory content in EverMemOS Hub must render beautifully with proper text layout 
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] Pretext integration layer: React hooks and wrappers around prepare/layout APIs — Validated in Phase 01: Foundation
+- [x] Performance: prepare() cached per text, layout() on resize only — Validated in Phase 01: Foundation
+- [x] SSR-safe: server components skip Pretext measurement, hydrate client-side — Validated in Phase 01: Foundation
 
 ### Active
 
-- [ ] Pretext integration layer: React hooks and wrappers around prepare/layout APIs
 - [ ] Memory content rendering: conversations, notes, profiles displayed via Pretext layout
 - [ ] Interactive demo pages: bubbles, dynamic-layout, masonry ported to Hub
 - [ ] Multilingual text support: CJK, Arabic, emoji, mixed-bidi all correct
-- [ ] Performance: prepare() cached per text, layout() on resize only
-- [ ] SSR-safe: server components skip Pretext measurement, hydrate client-side
 - [ ] EverMemOS API integration: fetch memory data from FastAPI backend
 - [ ] Responsive Hub UI: shadcn/ui + Tailwind, dark mode, mobile-friendly
 
@@ -52,10 +51,12 @@ Memory content in EverMemOS Hub must render beautifully with proper text layout 
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Next.js 16 App Router for Hub | Best SSR + client hydration for Pretext integration | — Pending |
-| Git submodule for Pretext | Allows tracking upstream while keeping read-only boundary | — Pending |
+| Next.js 16 App Router for Hub | Best SSR + client hydration for Pretext integration | ✅ Validated Phase 01 |
+| Git submodule for Pretext | Allows tracking upstream while keeping read-only boundary | ✅ Validated Phase 01 |
 | shadcn/ui + Tailwind for UI | Consistent with modern React ecosystem, good dark mode | — Pending |
-| Separate npm/bun dependency trees | Pretext is Bun-native; forcing npm would break its build system | — Pending |
+| Separate npm/bun dependency trees | Pretext is Bun-native; forcing npm would break its build system | ✅ Validated Phase 01 |
+| Pretext as local npm file dep | Turbopack resolveAlias can't use absolute paths; `file:../pretext` resolves it | ✅ Discovered Phase 01 |
+| PRETEXT_LINE_HEIGHT = 24 (px) | Pretext layout() expects pixel values, not ratios | ✅ Discovered Phase 01 |
 
 ## Evolution
 
@@ -75,4 +76,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-31 after initialization*
+*Last updated: 2026-03-31 after Phase 01 (Foundation) completion*
