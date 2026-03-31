@@ -24,10 +24,10 @@ Deliver the scaffolded Next.js 16 hub, Pretext integration hooks proven SSR-safe
 
 ### Sandbox Test Page
 - **D-06:** Sandbox page at `/sandbox` renders a single text block with multilingual content (English + CJK + Arabic + emoji). Displays measured height and lineCount from Pretext. Proves SSR-safe client hydration works.
-- **D-07:** Sandbox page is a Client Component (`'use client'`) with skeleton fallback during SSR.
+- **D-07:** Sandbox page is a Server Component (no `'use client'`). `SandboxBlock` is imported via `dynamic(..., { ssr: false })` to enforce the SSR boundary — Pretext hooks never execute on the server. The `loading` prop renders the skeleton during SSR and before hydration completes.
 
 ### Hook API Design
-- **D-08:** `usePrepared(text, font)` — module-level `Map<string, PreparedText>` cache keyed by `${text}|${font}`. Awaits `document.fonts.ready` before first `prepare()` call. Returns `{ prepared, isLoading }`.
+- **D-08:** `usePrepared(text, font)` — module-level `Map<string, PreparedText>` cache keyed by `${font}::${text}` (font first so font changes invalidate cleanly). Awaits `document.fonts.ready` before first `prepare()` call. Returns `{ prepared, isLoading }`.
 - **D-09:** `useLayout(prepared, width, lineHeight)` — calls `layout()` synchronously. Returns `{ height, lineCount }`. Safe to call in `useLayoutEffect`.
 - **D-10:** `useContainerWidth(ref)` — `ResizeObserver` + `requestAnimationFrame` debounce. Returns pixel width.
 - **D-11:** `usePreparedWithSegments(text, font)` — rich path for Phase 2 bidi rendering. Implemented now, tested in sandbox with Arabic text.
