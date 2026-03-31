@@ -1,0 +1,6 @@
+{
+  "buildCommand": "bash scripts/setup.sh && cd hub && npm run build",
+  "installCommand": "echo 'Install handled by buildCommand'",
+  "outputDirectory": "hub/.next",
+  "framework": "nextjs"
+}
