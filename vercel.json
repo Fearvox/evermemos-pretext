@@ -1,6 +1,6 @@
 {
   "installCommand": "cd hub && npm install",
-  "buildCommand": "cd pretext && npm install --ignore-scripts && npx tsc -p tsconfig.build.json && cd ../hub && npm run build",
+  "buildCommand": "cd pretext && npm install --no-package-lock --ignore-scripts typescript@6.0.2 && npx tsc -p tsconfig.build.json && cd ../hub && npm run build",
   "outputDirectory": "hub/.next",
   "git": {
     "submodules": true
