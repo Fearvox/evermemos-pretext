@@ -14,6 +14,7 @@ function getMemoryTitle(item: MemoryItem): string {
     case 'episode': return item.title
     case 'profile': return item.name
     case 'knowledge': return item.subject
+    default: return item.type satisfies never
   }
 }
 
