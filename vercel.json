@@ -1,5 +1,4 @@
 {
-  "installCommand": "cd pretext && npm install --ignore-scripts && npm run build:package && cd ../hub && npm install",
-  "buildCommand": "cd hub && npm run build",
-  "outputDirectory": "hub/.next"
+  "installCommand": "cd ../pretext && npm install --ignore-scripts && npx tsc -p tsconfig.build.json && cd ../hub && npm install",
+  "buildCommand": "npm run build"
 }
