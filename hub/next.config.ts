@@ -3,13 +3,14 @@ import type { NextConfig } from 'next'
 import path from 'path'
 
 const nextConfig: NextConfig = {
-  transpilePackages: ['@chenglou/pretext'],
+  transpilePackages: ['@chenglou/pretext', '../shared'],
   turbopack: {
     // Root must include the pretext submodule directory so Turbopack can
     // resolve the @pretext alias which points outside hub/.
     root: path.resolve(__dirname, '..'),
     resolveAlias: {
       '@pretext': '@chenglou/pretext',
+      '@shared': path.resolve(__dirname, '../shared'),
     },
   },
   webpack(config) {

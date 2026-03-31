@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@pretext": ["../pretext/src/layout.ts"]
+      "@pretext": ["../pretext/src/layout.ts"],
+      "@shared/*": ["../shared/*"]
     }
   },
   "include": [
