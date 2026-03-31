@@ -1,0 +1,20 @@
+[
+  {
+    "id": "know-001",
+    "type": "knowledge",
+    "subject": "Pretext Layout Engine",
+    "content": "Pretext is a pure TypeScript multiline text measurement and layout engine. It works in two phases: prepare() takes a text string and font descriptor and returns a PreparedText object using Canvas for font metric extraction. layout() then takes the PreparedText and a container width to compute exact line breaks and heights without touching the DOM. The walkLineRanges() function provides line-by-line iteration for advanced layouts like shrinkwrap containers. This two-phase model allows caching: prepare() is expensive but its result can be reused across multiple layout() calls at different widths.",
+    "tags": ["pretext", "text-layout", "architecture"],
+    "createdAt": "2026-03-14T11:00:00Z",
+    "updatedAt": "2026-03-14T11:00:00Z"
+  },
+  {
+    "id": "know-002",
+    "type": "knowledge",
+    "subject": "多语言文本渲染",
+    "content": "多语言文本渲染涉及多个Unicode算法的协同工作。CJK文字（中文、日文、韩文）遵循禁则规则（kinsoku）：行首禁止出现句号、逗号等标点，行末禁止出现开括号。英文和拉丁文字在单词边界处断行。Emoji需要特殊处理 — ZWJ序列（如 👨‍💻）必须作为一个整体，不能在中间断开。Pretext通过分析每个字符的Unicode属性来自动处理这些规则，开发者无需手动指定断行策略。",
+    "tags": ["multilingual", "rendering", "unicode"],
+    "createdAt": "2026-03-18T15:00:00Z",
+    "updatedAt": "2026-03-18T15:00:00Z"
+  }
+]
