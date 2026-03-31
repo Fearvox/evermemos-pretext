@@ -4,27 +4,344 @@
     "type": "profile",
     "name": "Dr. Sarah Chen",
     "role": "AI Researcher",
-    "description": "Dr. Chen leads the natural language processing team at MIT CSAIL. Her research focuses on multilingual text understanding and cross-lingual transfer learning. She has published over 40 papers on language model interpretability.",
+    "description": "Specializes in natural language processing and text layout systems. Published extensively on multilingual text rendering.",
     "fields": [
-      {"label": "Affiliation", "value": "MIT CSAIL"},
-      {"label": "Focus", "value": "Natural Language Processing"}
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 1"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
     ],
-    "tags": ["researcher", "nlp", "ai"],
-    "createdAt": "2026-03-10T08:00:00Z",
-    "updatedAt": "2026-03-10T08:00:00Z"
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-01T05:00:00.000Z",
+    "updatedAt": "2026-02-01T05:00:00.000Z"
   },
   {
     "id": "prof-002",
     "type": "profile",
     "name": "田中太郎",
     "role": "ソフトウェアエンジニア",
-    "description": "田中さんは東京工業大学でテキストレイアウトエンジンの研究開発を行っています。特にCJKテキストの禁則処理とUnicode line break algorithmの最適化に注力しています。Rustで書かれたhigh-performance text shaping libraryのメンテナーでもあります。",
+    "description": "テキストレイアウトシステムの開発に携わるエンジニア。CJKテキスト処理の専門家。",
     "fields": [
-      {"label": "所属", "value": "東京工業大学"},
-      {"label": "専門", "value": "テキストレイアウト"}
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 2"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
     ],
-    "tags": ["engineer", "japanese", "text-layout"],
-    "createdAt": "2026-03-12T09:00:00Z",
-    "updatedAt": "2026-03-12T09:00:00Z"
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-02T05:00:00.000Z",
+    "updatedAt": "2026-02-02T05:00:00.000Z"
+  },
+  {
+    "id": "prof-003",
+    "type": "profile",
+    "name": "Ahmed Al-Rashid",
+    "role": "Data Scientist",
+    "description": "Focus on bidirectional text processing and Arabic NLP. Works on cross-lingual information retrieval systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 3"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-03T05:00:00.000Z",
+    "updatedAt": "2026-02-03T05:00:00.000Z"
+  },
+  {
+    "id": "prof-004",
+    "type": "profile",
+    "name": "Maria Garcia",
+    "role": "Product Manager",
+    "description": "Leads the EverMemOS product team. Background in cognitive science and human-computer interaction.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 4"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-04T05:00:00.000Z",
+    "updatedAt": "2026-02-04T05:00:00.000Z"
+  },
+  {
+    "id": "prof-005",
+    "type": "profile",
+    "name": "Alex Kim",
+    "role": "ML Engineer",
+    "description": "Develops memory retrieval models for EverMemOS. Expertise in semantic search and embedding systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 5"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-05T05:00:00.000Z",
+    "updatedAt": "2026-02-05T05:00:00.000Z"
+  },
+  {
+    "id": "prof-006",
+    "type": "profile",
+    "name": "Dr. Sarah Chen",
+    "role": "AI Researcher",
+    "description": "Specializes in natural language processing and text layout systems. Published extensively on multilingual text rendering.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 6"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-06T05:00:00.000Z",
+    "updatedAt": "2026-02-06T05:00:00.000Z"
+  },
+  {
+    "id": "prof-007",
+    "type": "profile",
+    "name": "田中太郎",
+    "role": "ソフトウェアエンジニア",
+    "description": "テキストレイアウトシステムの開発に携わるエンジニア。CJKテキスト処理の専門家。",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 7"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-07T05:00:00.000Z",
+    "updatedAt": "2026-02-07T05:00:00.000Z"
+  },
+  {
+    "id": "prof-008",
+    "type": "profile",
+    "name": "Ahmed Al-Rashid",
+    "role": "Data Scientist",
+    "description": "Focus on bidirectional text processing and Arabic NLP. Works on cross-lingual information retrieval systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 8"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-08T05:00:00.000Z",
+    "updatedAt": "2026-02-08T05:00:00.000Z"
+  },
+  {
+    "id": "prof-009",
+    "type": "profile",
+    "name": "Maria Garcia",
+    "role": "Product Manager",
+    "description": "Leads the EverMemOS product team. Background in cognitive science and human-computer interaction.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 9"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-09T05:00:00.000Z",
+    "updatedAt": "2026-02-09T05:00:00.000Z"
+  },
+  {
+    "id": "prof-010",
+    "type": "profile",
+    "name": "Alex Kim",
+    "role": "ML Engineer",
+    "description": "Develops memory retrieval models for EverMemOS. Expertise in semantic search and embedding systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 10"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-10T05:00:00.000Z",
+    "updatedAt": "2026-02-10T05:00:00.000Z"
+  },
+  {
+    "id": "prof-011",
+    "type": "profile",
+    "name": "Dr. Sarah Chen",
+    "role": "AI Researcher",
+    "description": "Specializes in natural language processing and text layout systems. Published extensively on multilingual text rendering.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 11"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-11T05:00:00.000Z",
+    "updatedAt": "2026-02-11T05:00:00.000Z"
+  },
+  {
+    "id": "prof-012",
+    "type": "profile",
+    "name": "田中太郎",
+    "role": "ソフトウェアエンジニア",
+    "description": "テキストレイアウトシステムの開発に携わるエンジニア。CJKテキスト処理の専門家。",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 12"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-12T05:00:00.000Z",
+    "updatedAt": "2026-02-12T05:00:00.000Z"
+  },
+  {
+    "id": "prof-013",
+    "type": "profile",
+    "name": "Ahmed Al-Rashid",
+    "role": "Data Scientist",
+    "description": "Focus on bidirectional text processing and Arabic NLP. Works on cross-lingual information retrieval systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 13"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-13T05:00:00.000Z",
+    "updatedAt": "2026-02-13T05:00:00.000Z"
+  },
+  {
+    "id": "prof-014",
+    "type": "profile",
+    "name": "Maria Garcia",
+    "role": "Product Manager",
+    "description": "Leads the EverMemOS product team. Background in cognitive science and human-computer interaction.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 14"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "archived"
+    ],
+    "createdAt": "2026-02-14T05:00:00.000Z",
+    "updatedAt": "2026-02-14T05:00:00.000Z"
+  },
+  {
+    "id": "prof-015",
+    "type": "profile",
+    "name": "Alex Kim",
+    "role": "ML Engineer",
+    "description": "Develops memory retrieval models for EverMemOS. Expertise in semantic search and embedding systems.",
+    "fields": [
+      {
+        "label": "Affiliation",
+        "value": "Research Institute 15"
+      },
+      {
+        "label": "Focus",
+        "value": "Text Layout & Multilingual Rendering"
+      }
+    ],
+    "tags": [
+      "researcher",
+      "active"
+    ],
+    "createdAt": "2026-02-15T05:00:00.000Z",
+    "updatedAt": "2026-02-15T05:00:00.000Z"
   }
 ]

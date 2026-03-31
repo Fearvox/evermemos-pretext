@@ -3,18 +3,180 @@
     "id": "know-001",
     "type": "knowledge",
     "subject": "Pretext Layout Engine",
-    "content": "Pretext is a pure TypeScript multiline text measurement and layout engine. It works in two phases: prepare() takes a text string and font descriptor and returns a PreparedText object using Canvas for font metric extraction. layout() then takes the PreparedText and a container width to compute exact line breaks and heights without touching the DOM. The walkLineRanges() function provides line-by-line iteration for advanced layouts like shrinkwrap containers. This two-phase model allows caching: prepare() is expensive but its result can be reused across multiple layout() calls at different widths.",
-    "tags": ["pretext", "text-layout", "architecture"],
-    "createdAt": "2026-03-14T11:00:00Z",
-    "updatedAt": "2026-03-14T11:00:00Z"
+    "content": "Pretext is a pure TypeScript multiline text measurement and layout engine. It uses browser Canvas API for measurement, with prepare() handling text analysis and layout() doing pure arithmetic line breaking. Supports CJK, Arabic, emoji, and mixed-script content.",
+    "tags": [
+      "knowledge",
+      "important"
+    ],
+    "createdAt": "2026-03-01T05:00:00.000Z",
+    "updatedAt": "2026-03-01T05:00:00.000Z"
   },
   {
     "id": "know-002",
     "type": "knowledge",
     "subject": "多语言文本渲染",
-    "content": "多语言文本渲染涉及多个Unicode算法的协同工作。CJK文字（中文、日文、韩文）遵循禁则规则（kinsoku）：行首禁止出现句号、逗号等标点，行末禁止出现开括号。英文和拉丁文字在单词边界处断行。Emoji需要特殊处理 — ZWJ序列（如 👨‍💻）必须作为一个整体，不能在中间断开。Pretext通过分析每个字符的Unicode属性来自动处理这些规则，开发者无需手动指定断行策略。",
-    "tags": ["multilingual", "rendering", "unicode"],
-    "createdAt": "2026-03-18T15:00:00Z",
-    "updatedAt": "2026-03-18T15:00:00Z"
+    "content": "多语言文本渲染需要处理CJK换行规则、阿拉伯文双向文本、emoji测量校正等问题。Pretext通过Intl.Segmenter实现按字符分割，支持禁则处理和Zero-Width Joiner序列。👨‍💻",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-02T05:00:00.000Z",
+    "updatedAt": "2026-03-02T05:00:00.000Z"
+  },
+  {
+    "id": "know-003",
+    "type": "knowledge",
+    "subject": "Virtual Scrolling",
+    "content": "Virtual scrolling renders only visible items in a long list. @tanstack/react-virtual v3 provides useVirtualizer with dynamic heights. Combined with Pretext layout() for exact pre-render height calculation, this eliminates scroll-jump artifacts.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-03T05:00:00.000Z",
+    "updatedAt": "2026-03-03T05:00:00.000Z"
+  },
+  {
+    "id": "know-004",
+    "type": "knowledge",
+    "subject": "CJK Line Breaking",
+    "content": "CJK text follows kinsoku rules: certain characters cannot appear at line start (closing brackets, periods) or line end (opening brackets). Pretext merges prohibited punctuation into adjacent graphemes during the prepare() phase.",
+    "tags": [
+      "knowledge",
+      "important"
+    ],
+    "createdAt": "2026-03-04T05:00:00.000Z",
+    "updatedAt": "2026-03-04T05:00:00.000Z"
+  },
+  {
+    "id": "know-005",
+    "type": "knowledge",
+    "subject": "Bidi Text Rendering",
+    "content": "Bidirectional text (Arabic, Hebrew mixed with Latin) requires bidi level metadata. Pretext provides segLevels on the prepareWithSegments() path. The application layer uses these levels for correct visual ordering.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-05T05:00:00.000Z",
+    "updatedAt": "2026-03-05T05:00:00.000Z"
+  },
+  {
+    "id": "know-006",
+    "type": "knowledge",
+    "subject": "Pretext Layout Engine",
+    "content": "Pretext is a pure TypeScript multiline text measurement and layout engine. It uses browser Canvas API for measurement, with prepare() handling text analysis and layout() doing pure arithmetic line breaking. Supports CJK, Arabic, emoji, and mixed-script content.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-06T05:00:00.000Z",
+    "updatedAt": "2026-03-06T05:00:00.000Z"
+  },
+  {
+    "id": "know-007",
+    "type": "knowledge",
+    "subject": "多语言文本渲染",
+    "content": "多语言文本渲染需要处理CJK换行规则、阿拉伯文双向文本、emoji测量校正等问题。Pretext通过Intl.Segmenter实现按字符分割，支持禁则处理和Zero-Width Joiner序列。👨‍💻",
+    "tags": [
+      "knowledge",
+      "important"
+    ],
+    "createdAt": "2026-03-07T05:00:00.000Z",
+    "updatedAt": "2026-03-07T05:00:00.000Z"
+  },
+  {
+    "id": "know-008",
+    "type": "knowledge",
+    "subject": "Virtual Scrolling",
+    "content": "Virtual scrolling renders only visible items in a long list. @tanstack/react-virtual v3 provides useVirtualizer with dynamic heights. Combined with Pretext layout() for exact pre-render height calculation, this eliminates scroll-jump artifacts.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-08T05:00:00.000Z",
+    "updatedAt": "2026-03-08T05:00:00.000Z"
+  },
+  {
+    "id": "know-009",
+    "type": "knowledge",
+    "subject": "CJK Line Breaking",
+    "content": "CJK text follows kinsoku rules: certain characters cannot appear at line start (closing brackets, periods) or line end (opening brackets). Pretext merges prohibited punctuation into adjacent graphemes during the prepare() phase.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-09T04:00:00.000Z",
+    "updatedAt": "2026-03-09T04:00:00.000Z"
+  },
+  {
+    "id": "know-010",
+    "type": "knowledge",
+    "subject": "Bidi Text Rendering",
+    "content": "Bidirectional text (Arabic, Hebrew mixed with Latin) requires bidi level metadata. Pretext provides segLevels on the prepareWithSegments() path. The application layer uses these levels for correct visual ordering.",
+    "tags": [
+      "knowledge",
+      "important"
+    ],
+    "createdAt": "2026-03-10T04:00:00.000Z",
+    "updatedAt": "2026-03-10T04:00:00.000Z"
+  },
+  {
+    "id": "know-011",
+    "type": "knowledge",
+    "subject": "Pretext Layout Engine",
+    "content": "Pretext is a pure TypeScript multiline text measurement and layout engine. It uses browser Canvas API for measurement, with prepare() handling text analysis and layout() doing pure arithmetic line breaking. Supports CJK, Arabic, emoji, and mixed-script content.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-11T04:00:00.000Z",
+    "updatedAt": "2026-03-11T04:00:00.000Z"
+  },
+  {
+    "id": "know-012",
+    "type": "knowledge",
+    "subject": "多语言文本渲染",
+    "content": "多语言文本渲染需要处理CJK换行规则、阿拉伯文双向文本、emoji测量校正等问题。Pretext通过Intl.Segmenter实现按字符分割，支持禁则处理和Zero-Width Joiner序列。👨‍💻",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-12T04:00:00.000Z",
+    "updatedAt": "2026-03-12T04:00:00.000Z"
+  },
+  {
+    "id": "know-013",
+    "type": "knowledge",
+    "subject": "Virtual Scrolling",
+    "content": "Virtual scrolling renders only visible items in a long list. @tanstack/react-virtual v3 provides useVirtualizer with dynamic heights. Combined with Pretext layout() for exact pre-render height calculation, this eliminates scroll-jump artifacts.",
+    "tags": [
+      "knowledge",
+      "important"
+    ],
+    "createdAt": "2026-03-13T04:00:00.000Z",
+    "updatedAt": "2026-03-13T04:00:00.000Z"
+  },
+  {
+    "id": "know-014",
+    "type": "knowledge",
+    "subject": "CJK Line Breaking",
+    "content": "CJK text follows kinsoku rules: certain characters cannot appear at line start (closing brackets, periods) or line end (opening brackets). Pretext merges prohibited punctuation into adjacent graphemes during the prepare() phase.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-14T04:00:00.000Z",
+    "updatedAt": "2026-03-14T04:00:00.000Z"
+  },
+  {
+    "id": "know-015",
+    "type": "knowledge",
+    "subject": "Bidi Text Rendering",
+    "content": "Bidirectional text (Arabic, Hebrew mixed with Latin) requires bidi level metadata. Pretext provides segLevels on the prepareWithSegments() path. The application layer uses these levels for correct visual ordering.",
+    "tags": [
+      "knowledge",
+      "reference"
+    ],
+    "createdAt": "2026-03-15T04:00:00.000Z",
+    "updatedAt": "2026-03-15T04:00:00.000Z"
   }
 ]
