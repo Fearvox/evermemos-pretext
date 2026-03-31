@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "cd pretext && npm install --ignore-scripts && npx tsc -p tsconfig.build.json && cd ../hub && npm run build",
+    "install:all": "cd hub && npm install"
+  }
+}

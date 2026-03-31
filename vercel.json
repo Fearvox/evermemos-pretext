@@ -1,6 +1,7 @@
 {
-  "rootDirectory": "hub",
-  "buildCommand": "npm run vercel-build",
+  "installCommand": "cd hub && npm install",
+  "buildCommand": "cd pretext && npm install --ignore-scripts && npx tsc -p tsconfig.build.json && cd ../hub && npm run build",
+  "outputDirectory": "hub/.next",
   "git": {
     "submodules": true
   }
