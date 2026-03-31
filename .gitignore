@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.bun/
+
+# Build
+dist/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Personal Claude config
+CLAUDE.local.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
