@@ -2,5 +2,5 @@
   "installCommand": "cd pretext && npm install --ignore-scripts && npm run build:package && cd ../hub && npm install",
   "buildCommand": "cd hub && npm run build",
   "outputDirectory": "hub/.next",
-  "framework": "nextjs"
+  "framework": null
 }
