@@ -1,4 +1,7 @@
 {
-  "installCommand": "cd ../pretext && npm install --ignore-scripts && npx tsc -p tsconfig.build.json && cd ../hub && npm install",
-  "buildCommand": "npm run build"
+  "rootDirectory": "hub",
+  "buildCommand": "npm run vercel-build",
+  "git": {
+    "submodules": true
+  }
 }
