@@ -1,0 +1,30 @@
+[
+  {
+    "id": "prof-001",
+    "type": "profile",
+    "name": "Dr. Sarah Chen",
+    "role": "AI Researcher",
+    "description": "Dr. Chen leads the natural language processing team at MIT CSAIL. Her research focuses on multilingual text understanding and cross-lingual transfer learning. She has published over 40 papers on language model interpretability.",
+    "fields": [
+      {"label": "Affiliation", "value": "MIT CSAIL"},
+      {"label": "Focus", "value": "Natural Language Processing"}
+    ],
+    "tags": ["researcher", "nlp", "ai"],
+    "createdAt": "2026-03-10T08:00:00Z",
+    "updatedAt": "2026-03-10T08:00:00Z"
+  },
+  {
+    "id": "prof-002",
+    "type": "profile",
+    "name": "田中太郎",
+    "role": "ソフトウェアエンジニア",
+    "description": "田中さんは東京工業大学でテキストレイアウトエンジンの研究開発を行っています。特にCJKテキストの禁則処理とUnicode line break algorithmの最適化に注力しています。Rustで書かれたhigh-performance text shaping libraryのメンテナーでもあります。",
+    "fields": [
+      {"label": "所属", "value": "東京工業大学"},
+      {"label": "専門", "value": "テキストレイアウト"}
+    ],
+    "tags": ["engineer", "japanese", "text-layout"],
+    "createdAt": "2026-03-12T09:00:00Z",
+    "updatedAt": "2026-03-12T09:00:00Z"
+  }
+]
